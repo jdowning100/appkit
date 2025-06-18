@@ -67,6 +67,32 @@ if (typeof window !== 'undefined') {
 
 const customWallet = storedCustomWallet ? [JSON.parse(storedCustomWallet)] : []
 
+// Define Quai Network configuration
+const quai = {
+  id: 9,
+  name: 'Quai Network',
+  network: 'quai',
+  nativeCurrency: {
+    name: 'Quai',
+    symbol: 'QUAI',
+    decimals: 18
+  },
+  rpcUrls: {
+    default: {
+      http: ['https://rpc.quai.network/cyprus1']
+    },
+    public: {
+      http: ['https://rpc.quai.network/cyprus1']
+    }
+  },
+  blockExplorers: {
+    default: {
+      name: 'Quai Explorer',
+      url: 'https://rpc.quai.network/cyprus1'
+    }
+  }
+} as AppKitNetwork
+
 const EvmNetworks = [
   mainnet,
   optimism,
@@ -83,7 +109,8 @@ const EvmNetworks = [
   aurora,
   mantle,
   abstract,
-  monadTestnet
+  monadTestnet,
+  quai
 ] as [AppKitNetwork, ...AppKitNetwork[]]
 
 export const solanaNotExist = {

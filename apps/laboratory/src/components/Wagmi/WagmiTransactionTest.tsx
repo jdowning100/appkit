@@ -1,7 +1,7 @@
 import { useCallback, useState } from 'react'
 
 import { Button, Link, Spacer, Stack, Text } from '@chakra-ui/react'
-import { type Address, parseGwei } from 'viem'
+import { type Address, parseEther } from 'viem'
 import { useAccount, useEstimateGas, useSendTransaction } from 'wagmi'
 import { mainnet } from 'wagmi/chains'
 
@@ -10,7 +10,7 @@ import { vitalikEthAddress } from '@/src/utils/DataUtil'
 
 const TEST_TX = {
   to: vitalikEthAddress as Address,
-  value: parseGwei('0.001')
+  value: parseEther('0.001')
 }
 
 export function WagmiTransactionTest() {
