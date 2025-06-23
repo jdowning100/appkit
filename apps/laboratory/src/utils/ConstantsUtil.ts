@@ -79,16 +79,16 @@ const quai = {
   },
   rpcUrls: {
     default: {
-      http: ['https://rpc.quai.network/cyprus1']
+      http: ['https://node.quaiswap.io/cyprus1']
     },
     public: {
-      http: ['https://rpc.quai.network/cyprus1']
+      http: ['https://node.quaiswap.io/cyprus1']
     }
   },
   blockExplorers: {
     default: {
       name: 'Quai Explorer',
-      url: 'https://rpc.quai.network/cyprus1'
+      url: 'https://quaiscan.io'
     }
   }
 } as AppKitNetwork

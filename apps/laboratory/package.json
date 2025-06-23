@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:network": "next dev -H 0.0.0.0",
     "start": "next start",
     "build": "next build",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",

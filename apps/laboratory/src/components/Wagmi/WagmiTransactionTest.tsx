@@ -47,10 +47,12 @@ function AvailableTestContent() {
       },
       onError: error => {
         setLoading(false)
+        console.error(error)
         toast({
           title: 'Error',
           description: error?.message || 'Failed to sign transaction',
-          type: 'error'
+          type: 'error',
+          partialDescription: false
         })
       }
     }
@@ -60,10 +62,12 @@ function AvailableTestContent() {
     const { data: gas, error: prepareError } = await estimateGas()
 
     if (prepareError) {
+      console.error(prepareError)
       toast({
         title: 'Error',
         description: prepareError?.message || 'Failed to sign transaction',
-        type: 'error'
+        type: 'error',
+        partialDescription: false
       })
     } else {
       setLoading(true)

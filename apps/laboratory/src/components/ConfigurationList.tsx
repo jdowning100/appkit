@@ -3,6 +3,7 @@
 /* eslint-disable no-negated-condition */
 import type { ReactNode } from 'react'
 import { IoArrowForward } from 'react-icons/io5'
+import Link from 'next/link'
 
 import {
   Box,
@@ -11,7 +12,6 @@ import {
   CardBody,
   CardHeader,
   Heading,
-  Link,
   Stack,
   StackDivider,
   Text

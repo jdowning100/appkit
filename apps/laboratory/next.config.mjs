@@ -13,7 +13,6 @@ const cspReportToHeader = {
 
 const nextConfig = {
   reactStrictMode: true,
-  trailingSlash: true,
   distDir: 'out',
   cleanDistDir: true,
   webpack: config => {

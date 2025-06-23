@@ -226,7 +226,7 @@ export default function UniversalProviderPage() {
       console.error('Signing error:', error)
       toast({
         title: ConstantsUtil.SigningFailedToastTitle,
-        description: error instanceof Error ? error.message : 'Failed to sign message',
+        description: error instanceof Error ? error.message : `Failed to sign message: ${error}`,
         type: 'error'
       })
     }

@@ -86,8 +86,9 @@ export function WagmiSignMessageTest() {
       console.error('Failed to sign message', e)
       toast({
         title: ConstantsUtil.SigningFailedToastTitle,
-        description: 'Failed to sign message',
-        type: 'error'
+        description: `Failed to sign message: ${e}`,
+        type: 'error',
+        partialDescription: false
       })
     }
   }
